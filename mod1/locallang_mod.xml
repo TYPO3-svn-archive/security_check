@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module "tools_txsecuritycheckM1" - header, description</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="mlang_tabs_tab">Security Check</label>
+			<label index="mlang_labels_tabdescr">Check the current Typo3 Installation for security lacks.</label>
+			<label index="mlang_labels_tablabel">Security Checks</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="mlang_tabs_tab">Sicherheits-Check</label>
+			<label index="mlang_labels_tabdescr">Prüft die aktuelle Typo3-Installation auf Sicherheitslücken.</label>
+			<label index="mlang_labels_tablabel">Sicherheits-Checks</label>
+		</languageKey>
+		<languageKey type="array" index="fr">
+			<label index="mlang_tabs_tab">Test de sécurité</label>
+			<label index="mlang_labels_tabdescr">Permet de vérifier le niveau de sécurité de votre installation de Typo3.</label>
+			<label index="mlang_labels_tablabel">Tests de sécurité</label>
+		</languageKey></data>
+</T3locallang>

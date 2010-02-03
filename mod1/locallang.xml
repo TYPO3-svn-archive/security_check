@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;tools_txsecuritycheckM1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title">Security check</label>
+			<label index="function_runtests">Start tests</label>
+			<label index="wait">Please wait!</label>
+			<label index="function_list_to_much_file_rights">Show files/folders with too much rights</label>
+			<label index="function_list_unseless_files">Show useless/unsecure files</label>
+			<label index="title_runtests">Start tests</label>
+			<label index="intro_runtests">This extension let's you test the security of your Typo3 installation.</label>
+			<label index="start_runtests">Start tests</label>
+			<label index="show_runtests">Result</label>
+			<label index="headline_useless_files">Useless files</label>
+			<label index="delete">delete</label>
+			<label index="confirm_delete">Confirm deletion</label>
+			<label index="delete_all">Delete all</label>
+			<label index="confirm_delete_submit">Delete file(s)</label>
+			<label index="update_all_confirm_submit">Update file(s)</label>
+			<label index="update_all">Correct all</label>
+			<label index="intro_useless_files"></label>
+			<label index="headline_useless_files_without_extension">Files without file extension</label>
+			<label index="headline_useless_files_cvs">CVS folders</label>
+			<label index="headline_useless_files_inc">Files with extension .inc</label>
+			<label index="headline_useless_files_readme">Readme files</label>
+			<label index="headline_useless_files_backup">Backup files</label>
+			<label index="headline_list_to_much_file_rights">Files with too much rights (644 at most recommended)</label>
+			<label index="headline_list_to_much_folder_rights">Folders with too much rights (755 at most recommended)</label>
+			<!-- PHP INI -->
+			<label index="test_basedir_set">Is the PHP setting "open_basedir" set?</label>
+			<label index="test_basedir_set_error">The ini setting "open_basedir" should be set to avoid file access outside the allowed path</label>
+			<label index="test_error_log_on">Is the PHP setting "error_log" set?</label>
+			<label index="test_error_log_on_error">Errors should be logged!</label>
+			<label index="test_error_log_on_tipp">Tip: Add this line in your .htacces: php_flag error_log /var/.../logs/php_error.log</label>
+			<label index="test_register_globals_off">Is the PHP setting "register_globals" off?</label>
+			<label index="test_register_globals_off_error">register_globals should be off</label>
+			<label index="test_register_globals_off_tipp">Tip: Add this line in your .htacces: php_flag register_globals off</label>
+			<label index="test_error_display_off">Is the PHP setting "display_errors" off?</label>
+			<label index="test_error_display_off_error">This setting shows informations about your system.</label>
+			<label index="test_error_display_off_tipp">Tip: Add this line in your .htacces: php_flag display_errors off</label>
+			<label index="test_magic_quotes_off">Is the PHP setting "magic_quotes_gpc" off?</label>
+			<label index="test_magic_quotes_off_error">This setting enables insecure code.</label>
+			<label index="test_magic_quotes_off_tipp">Tip: Add this line in your .htacces: php_flag magic_quotes_gpc off</label>
+			<!-- Database Check -->
+			<label index="test_acces_mysql_users">Test access to the mySQL config database</label>
+			<label index="test_acces_mysql_users_error">Your database user should not have access to the mySQL config table</label>
+			<label index="test_hosts_restrictions">Test host restrictions of the mySQL user</label>
+			<label index="test_hosts_restrictions_error">mySQL user without host restrictions found.</label>
+			<label index="test_password">Test mySQL user passwords</label>
+			<label index="test_password_error">mySQL user without passwords found.</label>
+			<!-- loacalconf -->
+			<label index="test_encryptionkey">Is "encryptionkey" set?</label>
+			<label index="test_filecreatemask">Are permissions for new files too high?</label>
+			<label index="test_foldercreatemask">Are permissions for new folders too high?</label>
+			<label index="test_install_tool_password">Has the password for the install tool been changed?</label>
+			<label index="test_lockssl">Is the option "lockSSL" active?</label>
+			<label index="test_loginsecuritylevel_superchallenged">Is the highest security level set?</label>
+			<label index="test_warning_email_addr">Is a warning e-mail address specified?</label>
+			<label index="test_sessiontimeout_to_high">Is the session timeout set too high?</label>
+			<label index="test_sql_debug_off">Is the SQL debug feature disabled?</label>
+			<label index="test_displayerrors">Is the display of errors disabled?</label>
+			<label index="test_allowglobalinstall">Is the option to install global extensions disabled?</label>
+			<label index="test_disable_exec_function">Is the flag "disable_exec_function" activated?</label>
+			<label index="test_disable_exec_function_error">The flag "disable_exec_function" is not activated.</label>
+			<label index="test_disable_exec_function_tipp">Add the following line in your localconf.php: $TYPO3_CONF_VARS['BE']['disable_exec_function'] = '1'</label>
+			<label index="test_noedit">Is the option to edit extensions disabled?</label>
+			<!-- Backend Access -->
+			<label index="test_access_backend">Is the access to the Typo3 backend protected?</label>
+			<label index="test_access_install_tool">Is the access to the Typo3 install tool protected?</label>
+			<!-- Files Check -->
+			<label index="test_backup_files">Are there backup files on the server?</label>
+			<label index="test_cvs_files">Are there CVS files on the server?</label>
+			<label index="test_files_without_ext">Are there files without extension on the server?</label>
+			<label index="test_inc_files">Are there CVS files on the server?</label>
+			<label index="test_readme_files">Are there readme files on the server?</label>
+			<label index="test_svn_files">Are there subversion files on the server?</label>
+			<!-- Typo3 -->
+			<label index="test_standard_password">Is the used password still the standard password?</label>
+			<label index="test_extension_black_list">Checks if insecure extensions are loaded.</label>
+			<label index="test_extension_black_list_err_tipafriend">The Extension "tipafriend" with the Version, lower than 1.2.1 could be insecure.</label>
+			<label index="test_extension_black_list_err_th_mailformplus">The Extension "th_mailformplus" with the Version, lower than 3.6.1 could be insecure.</label>
+			<label index="test_extension_black_list_err_dam_downloads">The Extension "dam_downloads" with the Version, lower than 1.0.1 could be insecure.</label>
+			<label index="test_extension_black_list_err_chc_forum">The Extension "chc_forum" with the Version, lower than 1.4.4 could be insecure.</label>
+			<label index="test_extension_black_list_err_fe_rtenews">The Extension "fe_rtenews" with the Version, lower than 0.4.3 could be insecure.</label>
+			<label index="test_extension_black_list_err_moc_filemanager">The Extension "moc_filemanager" with the Version, lower than 0.7.1 could be insecure.</label>
+			<label index="test_extension_black_list_err_cc_awstats">The Extension "cc_awstats" with the Version, lower than 0.9.0 could be insecure.</label>
+			<label index="test_extension_black_list_err_cmw_linklist">The Extension "cmw_linklist" with the Version, lower than 1.4.1 could be insecure.</label>
+			<label index="test_extension_black_list_err_rtehtmlarea">The Extension "rtehtmlarea" is not up to date.</label>
+			<label index="test_typo3_version">Is your Typo3 version up to date?</label>
+			<label index="test_typo3_version_err">Your Typo3 version is not up to date!</label>
+			<!-- External Tools -->
+			<label index="test_phpinfo">Search phpinfo outputs.</label>
+			<!-- File rights -->
+			<label index="test_folder_rights">Checks folder permissions.</label>
+			<label index="test_file_rights">Checks file permissions.</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="title">Sicherheits-Check</label>
+			<label index="function_runtests">Test starten</label>
+			<label index="wait">Bitte warten!</label>
+			<label index="function_list_unseless_files">Unnötige/unsichere Dateien anzeigen</label>
+			<label index="function_list_to_much_file_rights">Dateien/Ordner mit zu hohen Rechten anzeigen</label>
+			<label index="title_runtests">Tests starten</label>
+			<label index="intro_runtests">Hiermit können Sie die Sicherheit Ihrer Typo3-Installation testen. Bitte prüfen Sie, ob von dieser Extension eine neue Version existiert, da nur so gewährleistet werden kann, dass die neuesten Sicherheitslöcher gefunden werden können.</label>
+			<label index="start_runtests">Tests starten</label>
+			<label index="show_runtests">Test-Ergebnisse</label>
+			<label index="headline_useless_files">Unnötige Dateien</label>
+			<label index="delete">Löschen</label>
+			<label index="confirm_delete">Bestätigen Sie bitte, dass Sie folgende Dateien löschen möchten.</label>
+			<label index="delete_all">Alle löschen</label>
+			<label index="confirm_delete_submit">Datei(en) löschen</label>
+			<label index="update_all_confirm_submit">Datei(en) aktualisieren</label>
+			<label index="update_all">Alle korrigieren</label>
+			<label index="intro_useless_files">Diese Dateien sollten nicht auf Ihren Live-Server sein, da diese Informationen über Ihr System preisgeben können und somit Ihrem System mehr Angriffsfläche bieten.</label>
+			<label index="headline_useless_files_without_extension">Dateien ohne Endung</label>
+			<label index="headline_useless_files_cvs">CVS-Ordner</label>
+			<label index="headline_useless_files_inc">Dateien mit der Endung .inc</label>
+			<label index="headline_useless_files_readme">Readme-Dateien</label>
+			<label index="headline_useless_files_backup">Backup-Dateien</label>
+			<label index="headline_list_to_much_file_rights">Dateien mit zu hohen Rechten (max. 644 empfohlen)</label>
+			<label index="headline_list_to_much_folder_rights">Ordner mit zu hohen Rechten (max. 755 empfohlen)</label>
+			<!-- PHP INI -->
+			<label index="test_basedir_set">Ist die PHP-Einstellung "open_basedir" gesetzt?</label>
+			<label index="test_basedir_set_error">Setzten Sie die Einstellung "open_basedir", um die Zugriffsmöglichkeiten von PHP im Dateisystem zu begrenzen.</label>
+			<label index="test_error_log_on">Ist die PHP-Einstellung "error_log" eingeschaltet?</label>
+			<label index="test_error_log_on_error">Fehler sollten geloggt werden, um eventuelle Angriffe oder Schwachstellen im Code zu entdecken.</label>
+			<label index="test_error_log_on_tipp">Tipp: Diese Einstellung können Sie in der Regel in der .htacces ändern: php_flag error_log on</label>
+			<label index="test_register_globals_off">Ist die PHP-Einstellung "register_globals" ausgeschaltet?</label>
+			<label index="test_register_globals_off_error">Die Einstellung "register_globals" ermöglicht es, unsicheren PHP-Code zu implementieren!</label>
+			<label index="test_register_globals_off_tipp">Tipp: Diese Einstellung können Sie in der Regel in der .htacces ändern: php_flag register_globals off</label>
+			<label index="test_error_display_off">Ist die PHP-Einstellung "display_errors" ausgeschaltet?</label>
+			<label index="test_error_display_off_error">Durch diese Einstellung zeigen Sie Angreifern System-Informationen.</label>
+			<label index="test_error_display_off_tipp">Tipp: Diese Einstellung können Sie in der Regel in der .htacces ändern: php_flag display_errors off</label>
+			<label index="test_magic_quotes_off">Ist die PHP-Einstellung "magic_quotes_gpc" ausgeschaltet?</label>
+			<label index="test_magic_quotes_off_error">Diese Einstellung ermöglicht das Schreiben und Verwenden unsicheren Codes.</label>
+			<label index="test_magic_quotes_off_tipp">Tipp: Diese Einstellung können Sie in der Regel in der .htacces ändern: php_flag magic_quotes_gpc off</label>
+			<!-- Database Check -->
+			<label index="test_acces_mysql_users">Testet den Zugang auf die mySQL-Konfigurations-Datenbank</label>
+			<label index="test_acces_mysql_users_error">Der Datenbankuser sollte keinen Zugang auf die mySQL-Konfigurations-Datenbank haben.</label>
+			<label index="test_hosts_restrictions">Testet die Host-Einschränkung der mySQL-User</label>
+			<label index="test_hosts_restrictions_error">Es wurden mySQL-User ohne Host Einschränkung gefunden.</label>
+			<label index="test_password">Testet die mySQL-User-Passwörter</label>
+			<label index="test_password_error">mySQL-User ohne Passwörter gefunden.</label>
+			<!-- loacalconf -->
+			<label index="test_encryptionkey">Ist "encryptionkey" gesetzt?</label>
+			<label index="test_filecreatemask">Sind die Dateirechte beim Erstellen neuer Dateien zu hoch?</label>
+			<label index="test_foldercreatemask">Sind die Dateirechte beim Erstellen neuer Ordner zu hoch?</label>
+			<label index="test_install_tool_password">Wurde das Install-Tool-Passwort geändert?</label>
+			<label index="test_lockssl">Ist die Option lockSSL aktiv?</label>
+			<label index="test_loginsecuritylevel_superchallenged">Ist die höchste Sicherheitsstufe gewählt?</label>
+			<label index="test_warning_email_addr">Ist eine Warnungs-E-Mail Adresse eingetragen?</label>
+			<label index="test_sessiontimeout_to_high">Ist das Session-Timeout zu hoch?</label>
+			<label index="test_sql_debug_off">Ist das SQL-Debug-Feature ausgeschaltet?</label>
+			<label index="test_displayerrors">Ist das Anzeigen von Fehlern ausgeschaltet?</label>
+			<label index="test_allowglobalinstall">Ist die Option zur Installation globaler Extensions ausgeschaltet?</label>
+			<label index="test_disable_exec_function">Ist der Schalter "disable_exec_function" aktiviert?</label>
+			<label index="test_disable_exec_function_error">Der Schalter "disable_exec_function" ist nicht aktiviert.</label>
+			<label index="test_disable_exec_function_tipp">Fügen Sie in Ihre localconf.php folgende Zeile ein: $TYPO3_CONF_VARS['BE']['disable_exec_function'] = '1'</label>
+			<label index="test_noedit">Ist die Option zum Editieren von Extensions ausgeschaltet?</label>
+			<!-- Backend Access -->
+			<label index="test_access_backend">Prüft, ob das Typo3-Backend geschützt ist.</label>
+			<label index="test_access_install_tool">Prüft, ob das Typo3-Install-Tool geschützt ist.</label>
+			<!-- Files Check -->
+			<label index="test_backup_files">Befinden sich Backup-Dateien auf dem Server?</label>
+			<label index="test_cvs_files">Befinden sich CVS-Dateien auf dem Server?</label>
+			<label index="test_files_without_ext">Befinden sich Dateien ohne Dateierweiterung auf dem Server?</label>
+			<label index="test_inc_files">Befinden sich .inc-Dateien auf dem Server?</label>
+			<label index="test_readme_files">Befinden sich Readme-Dateien auf dem Server?</label>
+			<label index="test_svn_files">Befinden sich Subversion-Dateien auf dem Server?</label>
+			<!-- Typo3 -->
+			<label index="test_standard_password">Wird das Standard-Passwort verwendet?</label>
+			<label index="test_typo3_version">Ist die aktuellste Typo3-Version geladen?</label>
+			<label index="test_extension_black_list">Prüft, ob unsichere Extension geladen sind.</label>
+			<label index="test_extension_black_list_err_tipafriend">Die Extension Tipafriend wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_tipafriend">Die Extension "tipafriend" mit der Version kleiner als 1.2.1 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_th_mailformplus">Die Extension "th_mailformplus" mit der Version kleiner als 3.6.1 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_dam_downloads">Die Extension "dam_downloads" mit der Version kleiner als 1.0.1 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_chc_forum">Die Extension "chc_forum" mit der Version kleiner als 1.4.4 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_fe_rtenews">Die Extension "fe_rtenews" mit der Version kleiner als 0.4.3 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_moc_filemanager">Die Extension "moc_filemanager" mit der Version kleiner als 0.7.1 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_cc_awstats">Die Extension "cc_awstats" mit der Version kleiner als 0.9.0 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_cmw_linklist">Die Extension "cmw_linklist" mit der Version kleiner als 1.4.1 wird als unsicher eingestuft.</label>
+			<label index="test_extension_black_list_err_rtehtmlarea">Die Extension "rtehtmlarea" ist nicht auf den neusten Stand.</label>
+			<!-- External Tools -->
+			<label index="test_phpinfo">Sucht PHP-Info-Ausgaben.</label>
+			<!-- File rights -->
+			<label index="test_folder_rights">Prüft die Rechte von Ordnern.</label>
+			<label index="test_file_rights">Prüft die Rechte von Dateien.</label>
+		</languageKey>
+		<languageKey type="array" index="fr">
+				<label index="title">Test de sécurité</label>
+				<label index="function_runtests">Démarrer le test</label>
+				<label index="wait">Veuillez patienter!</label>
+				<label index="function_list_unseless_files">Afficher les fichiers inutiles/peu sûrs</label>
+				<label index="function_list_to_much_file_rights">Afficher les fichiers/répertoires avec droits d'accès surélevés</label>
+				<label index="title_runtests">Démarrer les tests</label>
+				<label index="intro_runtests">Cette extension vous permet de tester la sécurité de votre installation de Typo3. Assurez vous que vous avez la version la plus récente de cette extension pour être sûr d'identifier les failles de sécurité récentes.</label>
+				<label index="start_runtests">Démarrer les tests</label>
+				<label index="show_runtests">Résultats</label>
+				<label index="headline_useless_files">Fichiers inutiles</label>
+				<label index="delete">Supprimer</label>
+				<label index="confirm_delete">Veuillez confirmer la suppression de ces fichiers.</label>
+				<label index="delete_all">Supprimer tous</label>
+				<label index="confirm_delete_submit">Supprimer fichier(s)</label>
+				<label index="update_all_confirm_submit">Mettre fichier(s) à jour</label>
+				<label index="update_all">Tous corriger</label>
+				<label index="intro_useless_files">Ces fichiers ne devraient pas se trouver sur votre serveur en ligne. Ils peuvent rendre des informations délicates public et ainsi rendre votre système vulnerable à des attaques.</label>
+				<label index="headline_useless_files_without_extension">Fichiers sans extension</label>
+				<label index="headline_useless_files_cvs">Répertoires CVS</label>
+				<label index="headline_useless_files_inc">Fichiers avec extension .inc</label>
+				<label index="headline_useless_files_readme">Fichiers readme (lisezmoi)</label>
+				<label index="headline_useless_files_backup">Fichiers de sauvegarde</label>
+				<label index="headline_list_to_much_file_rights">Fichiers avec droits d'accès surélevés (644 au maximum recommandé)</label>
+				<label index="headline_list_to_much_folder_rights">Répertoires avec droits d'accès surélevés (755 au maximum recommandé)</label>
+				<!-- PHP INI -->
+				<label index="test_basedir_set">Est-ce que l'option PHP "open_basedir" est definie?</label>
+				<label index="test_basedir_set_error">Servez-vous de l'option "open_basedir" pour limiter les droits d'accès de PHP.</label>
+				<label index="test_error_log_on">Est-ce que l'option PHP "error_log" est activée?</label>
+				<label index="test_error_log_on_error">Les erreurs devraient être enregistrés pour vous permettre d'identifier d'éventuelles attaques ou pour trouver des points faibles dans le code source.</label>
+				<label index="test_error_log_on_tipp">Astuce: Vous pouvez changer cette option dans .htacces: php_flag error_log on</label>
+				<label index="test_register_globals_off">Est-ce que l'option PHP "register_globals" est désactivée?</label>
+				<label index="test_register_globals_off_error">L'option "register_globals" permet d'implémenter du code PHP peu sûr.</label>
+				<label index="test_register_globals_off_tipp">Astuce: Vous pouvez changer cette option dans .htacces: php_flag register_globals off</label>
+				<label index="test_error_display_off">Est-ce que l'option PHP "display_errors" est désactivée?</label>
+				<label index="test_error_display_off_error">Avec cette option vous montrez aux attaquants des informations délicates de votre système.</label>
+				<label index="test_error_display_off_tipp">Astuce: Vous pouvez changer cette option dans .htacces: php_flag display_errors off</label>
+				<label index="test_magic_quotes_off">Est-ce que l'option PHP "magic_quotes_gpc" est désactivée?</label>
+				<label index="test_magic_quotes_off_error">Cette option permet d'écrire et d'utiliser du code peu sûr.</label>
+				<label index="test_magic_quotes_off_tipp">Astuce: Vous pouvez changer cette option dans .htacces: php_flag magic_quotes_gpc off</label>
+				<!-- Database Check -->
+				<label index="test_acces_mysql_users">Test d'accès à la base de données de configuration mySQL</label>
+				<label index="test_acces_mysql_users_error">L'utilisateur mySQL ne devrait pas avoir d'accès à la base de données de configuration mySQL</label>
+				<label index="test_hosts_restrictions">Test de restriction d'hôtes des utilisateurs mySQL</label>
+				<label index="test_hosts_restrictions_error">Utilisateurs mySQL sans restriction d'hôtes trouvés</label>
+				<label index="test_password">Test des mots de passe des utilisateurs mySQL</label>
+				<label index="test_password_error">Utilisateurs mySQL sans mot de passe trouvés</label>
+				<!-- loacalconf -->
+				<label index="test_encryptionkey">Est-ce que "encryptionkey" est definie?</label>
+				<label index="test_filecreatemask">Est-ce que les droits d'accès de fichiers créés sont surélevés?</label>
+				<label index="test_foldercreatemask">Est-ce que les droits d'accès de répertoires créés sont surélevés?</label>
+				<label index="test_install_tool_password">A le mot de passe de l'Install Tool été changé?</label>
+				<label index="test_lockssl">Est-ce que l'option lockSSL est active?</label>
+				<label index="test_loginsecuritylevel_superchallenged">Est-ce que le niveau de sécurité le plus élevé est choisi?</label>
+				<label index="test_warning_email_addr">Est-ce qu'une adresse éléctronique pour les avertissements a été précisé?</label>
+				<label index="test_sessiontimeout_to_high">Est-ce que le temps de débouclement de sessions est trop haut?</label>
+				<label index="test_sql_debug_off">Est-ce que SQL debug est désactivé?</label>
+				<label index="test_displayerrors">Est-ce que l'affichage d'erreurs est désactivée?</label>
+				<label index="test_allowglobalinstall">Est-ce que l'option d'installer des extensions globalement est désactivée?</label>
+				<label index="test_disable_exec_function">Est-ce que "disable_exec_function" est activé?</label>
+				<label index="test_disable_exec_function_error">"disable_exec_function" n'est pas actif.</label>
+				<label index="test_disable_exec_function_tipp">Ajoutez la ligne suivante dans votre localconf.php: $TYPO3_CONF_VARS['BE']['disable_exec_function'] = '1'</label>
+				<label index="test_noedit">Est-ce que l'option pour éditer des extensions est désactivée?</label>
+				<!-- Backend Access -->
+				<label index="test_access_backend">Vérifie si le backend de Typo3 est protégé.</label>
+				<label index="test_access_install_tool">Vérifie si l'Install Tool de Typo3 est protégé.</label>
+				<!-- Files Check -->
+				<label index="test_backup_files">Est-ce que des fichiers de sauvegarde se trouvent sur le serveur?</label>
+				<label index="test_cvs_files">Est-ce que des fichiers CVS se trouvent sur le serveur?</label>
+				<label index="test_files_without_ext">Est-ce que des fichiers sans extension se trouvent sur le serveur?</label>
+				<label index="test_inc_files">Est-ce que des fichiers .inc se trouvent sur le serveur?</label>
+				<label index="test_readme_files">Est-ce que des fichiers readme (lisezmoi) se trouvent sur le serveur?</label>
+				<label index="test_svn_files">Est-ce que des fichiers Subversion se trouvent sur le serveur?</label>
+				<!-- Typo3 -->
+				<label index="test_standard_password">Est-ce que le mot de passe par défaut est toujours en service?</label>
+				<label index="test_typo3_version">Est-ce que la version la plus récente de Typo3 est chargée?</label>
+				<label index="test_typo3_version_err">Votre installation de Typo3 ne correspond pas à la version la plus récente.</label>
+				<label index="test_extension_black_list">Vérifie si des extensions peu sûres sont chargées.</label>
+				<label index="test_extension_black_list_err_tipafriend">L'extension Tipafriend est considérée pas sûre.</label>
+				<!-- External Tools -->
+				<label index="test_phpinfo">Cherche PHP-Info.</label>
+				<!-- File rights -->
+				<label index="test_folder_rights">Verifie les droits d'accès de répertoires.</label>
+				<label index="test_file_rights">Verifie les droits d'accès de fichiers.</label>
+			</languageKey>
+		</data>
+</T3locallang>
