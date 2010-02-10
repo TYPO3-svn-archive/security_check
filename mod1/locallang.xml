@@ -7,7 +7,14 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="title">Security check</label>
-			<label index="function_runtests">Start tests</label>
+			<label index="functionPhpIni">Test php.ini</label>
+			<label index="functionDatabase">Test Database</label>
+			<label index="functionTypo3Localconf">Test TYPO3 localconf.php</label>
+			<label index="functionTypo3Access">Test TYPO3 Access</label>
+			<label index="functionFiles">Test Files</label>
+			<label index="functionTypo3">Test TYPO3</label>
+			<label index="functionExternalTools">Test external Tools</label>
+			<label index="functionFileRights">Test FileRights</label>
 			<label index="wait">Please wait!</label>
 			<label index="function_list_to_much_file_rights">Show files/folders with too much rights</label>
 			<label index="function_list_unseless_files">Show useless/unsecure files</label>
@@ -100,7 +107,14 @@
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="title">Sicherheits-Check</label>
-			<label index="function_runtests">Test starten</label>
+			<label index="functionPhpIni">Teste php.ini</label>
+			<label index="functionDatabase">Teste Datenbank</label>
+			<label index="functionTypo3Localconf">Teste TYPO3 localconf.php</label>
+			<label index="functionTypo3Access">Teste TYPO3 Zugang</label>
+			<label index="functionFiles">Teste Dateien</label>
+			<label index="functionTypo3">Teste TYPO3</label>
+			<label index="functionExternalTools">Teste externe Tools</label>
+			<label index="functionFileRights">Test Dateiberechtigungen</label>
 			<label index="wait">Bitte warten!</label>
 			<label index="function_list_unseless_files">Unnötige/unsichere Dateien anzeigen</label>
 			<label index="function_list_to_much_file_rights">Dateien/Ordner mit zu hohen Rechten anzeigen</label>
@@ -193,7 +207,6 @@
 		</languageKey>
 		<languageKey type="array" index="fr">
 				<label index="title">Test de sécurité</label>
-				<label index="function_runtests">Démarrer le test</label>
 				<label index="wait">Veuillez patienter!</label>
 				<label index="function_list_unseless_files">Afficher les fichiers inutiles/peu sûrs</label>
 				<label index="function_list_to_much_file_rights">Afficher les fichiers/répertoires avec droits d'accès surélevés</label>

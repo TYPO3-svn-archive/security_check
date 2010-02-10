@@ -84,7 +84,7 @@ class security_check_renderer{
 		}
 		$content .= '<tr class="'.$sCss.'">';
 		$content .= '<td colspan="2">';
-		$content .= htmlentities($this->getLL($sMethodName));
+		$content .= htmlentities($this->getLL($sMethodName), ENT_COMPAT, 'UTF-8');
 		$content .= '</td>';
 		if(true === $aMethodsResults['passed']){
 			$content .= '<td class="'.$sCss.'" style="width:30px;">'.$sIcon = $this->_oTemplate->icons(-1).'</td>';
@@ -139,12 +139,12 @@ class security_check_renderer{
 		$content .= '<td class="'.$sCss.'" colspan="2">';
 		$err = $oMethodsResult->getMessage();
 		if(is_array($err)){
-			$content .= htmlentities($this->getLL($err['error']));
+			$content .= htmlentities($this->getLL($err['error']), ENT_COMPAT, 'UTF-8');
 			if(isset($err['tipp'])){
-				$content .= '<br/>'.$this->_oTemplate->icons(1).htmlentities($this->getLL($err['tipp']));
+				$content .= '<br/>'.$this->_oTemplate->icons(1).htmlentities($this->getLL($err['tipp']), ENT_COMPAT, 'UTF-8');
 			}
 		}else{
-			$content .= htmlentities($this->getLL($err));
+			$content .= htmlentities($this->getLL($err), ENT_COMPAT, 'UTF-8');
 		}
 		$content .= '</td>';
 		$content .= '<td class="'.$sCss.'">';

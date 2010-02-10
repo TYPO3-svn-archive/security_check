@@ -55,7 +55,14 @@ class tx_securitycheck_module1 extends t3lib_SCbase {
 		global $LANG;
 		$this->MOD_MENU = Array (
 			'function' => Array (
-				'runtests' => $LANG->getLL('function_runtests'),
+				'runTestPhpIni' => $LANG->getLL('functionPhpIni'),
+				'runTestDatabase' => $LANG->getLL('functionDatabase'),
+				'runTestTypo3Localconf' => $LANG->getLL('functionTypo3Localconf'),
+				'runTestTypo3Access' => $LANG->getLL('functionTypo3Access'),
+				'runTestFiles' => $LANG->getLL('functionFiles'),
+				'runTestTypo3' => $LANG->getLL('functionTypo3'),
+				'runTestExternalTools' => $LANG->getLL('functionExternalTools'),
+				'runTestFileRights' => $LANG->getLL('functionFileRights'),
 				'list_unseless_files' => $LANG->getLL('function_list_unseless_files'),
 				'list_to_much_file_rights' => $LANG->getLL('function_list_to_much_file_rights'),
 			)
@@ -94,7 +101,7 @@ class tx_securitycheck_module1 extends t3lib_SCbase {
 
 			$headerSection = $this->doc->getHeader("pages",$this->pageinfo,$this->pageinfo["_thePath"])."<br />".$LANG->sL("LLL:EXT:lang/locallang_core.xml:labels.path").": ".t3lib_div::fixed_lgd_pre($this->pageinfo["_thePath"],50);
 			$this->content.=$this->doc->startPage($LANG->getLL("title"));
-			$this->content.=$this->doc->header(htmlentities($LANG->getLL("title")));
+			$this->content.=$this->doc->header(htmlentities($LANG->getLL("title"), ENT_COMPAT, 'UTF-8'));
 			$this->content.=$this->doc->spacer(5);
 			$this->content.=$this->doc->section("",$this->doc->funcMenu($headerSection,t3lib_BEfunc::getFuncMenu($this->id,"SET[function]",$this->MOD_SETTINGS["function"],$this->MOD_MENU["function"])));
 			$this->content.=$this->doc->divider(5);
@@ -126,25 +133,111 @@ class tx_securitycheck_module1 extends t3lib_SCbase {
 	 * Generates the module content
 	 * @return	void
 	 */
-	function moduleContent()	{
-		switch((string)$this->MOD_SETTINGS["function"])	{
-			case 'runtests':
-				$this->_runtests();
-			break;
+	function moduleContent() {
+		switch((string)$this->MOD_SETTINGS["function"]) {
+			case 'runTestPhpIni':
+				$this->_runTestPhpIni();
+				break;
+			case 'runTestDatabase':
+				$this->_runTestDatabase();
+				break;
+			case 'runTestTypo3Localconf':
+				$this->_runTestTypo3Localconf();
+				break;
+			case 'runTestTypo3Access':
+				$this->_runTestTypo3Access();
+				break;
+			case 'runTestFiles':
+				$this->_runTestFiles();
+				break;
+			case 'runTestTypo3':
+				$this->_runTestTypo3();
+				break;
+			case 'runTestExternalTools':
+				$this->_runTestExternalTools();
+				break;
+			case 'runTestFileRights':
+				$this->_runTestFileRights();
+				break;
 			case 'list_unseless_files':
 				$this->_deleteFiles();
-			break;
+				break;
 			case 'list_to_much_file_rights':
 				$this->_fileRights();
-			break;
+				break;
 		}
 	}
+
 	/**
-	 * Function: Run tests
+	 * Function: Run test to check php.ini
+	 * @return	void
+	 */
+	function _runTestPhpIni() {
+		$this->content .= $this->_runtest('security_check_test_php_ini');
+	}
+
+	/**
+	 * Function: Run test to check database
+	 * @return	void
+	 */
+	function _runTestDatabase() {
+		$this->content .= $this->_runtest('security_check_test_database');
+	}
+
+	/**
+	 * Function: Run test to check TYPO3 localconf.php
+	 * @return	void
+	 */
+	function _runTestTypo3Localconf() {
+		$this->content .= $this->_runtest('security_check_test_typo3_localconf');
+	}
+
+	/**
+	 * Function: Run test to check TYPO3 Access
+	 * @return	void
+	 */
+	function _runTestTypo3Access() {
+		$this->content .= $this->_runtest('security_check_test_typo3_access');
+	}
+
+	/**
+	 * Function: Run test to check files
+	 * @return	void
+	 */
+	function _runTestFiles() {
+		$this->content .= $this->_runtest('security_check_test_files');
+	}
+
+	/**
+	 * Function: Run test to check TYPO3
+	 * @return	void
+	 */
+	function _runTestTypo3() {
+		$this->content .= $this->_runtest('security_check_test_typo3');
+	}
+
+	/**
+	 * Function: Run test to check external tools
+	 * @return	void
+	 */
+	function _runTestExternalTools() {
+		$this->content .= $this->_runtest('security_check_test_external_tools');
+	}
+
+	/**
+	 * Function: Run test to check file rights
+	 * @return	void
+	 */
+	function _runTestFileRights() {
+		$this->content .= $this->_runtest('security_check_test_file_rights');
+	}
+
+	/**
+	 * Function: Run specified test
 	 * Show the Start Button and the Reuslts
 	 * @return	void
 	 */
-	function _runtests(){
+	function _runtest($testname) {
 		global $LANG,$LOCAL_LANG;
 		$CMD =  t3lib_div::_GP('CMD');
 		switch ($CMD) {
@@ -153,23 +246,16 @@ class tx_securitycheck_module1 extends t3lib_SCbase {
 				require_once(SECURITY_CHECK_CLASS_ROOT.'security_check_runner.php');
 				$renderer = t3lib_div::makeInstance('security_check_renderer');
 				$runner = new security_check_runner($renderer);
-				$runner->addSuite('security_check_test_php_ini');
-				$runner->addSuite('security_check_test_database');
-				$runner->addSuite('security_check_test_typo3_localconf');
-				$runner->addSuite('security_check_test_typo3_access');
-				$runner->addSuite('security_check_test_files');
-				$runner->addSuite('security_check_test_typo3');
-				$runner->addSuite('security_check_test_external_tools');
-				$runner->addSuite('security_check_test_file_rights');
+				$runner->addSuite($testname);
 				$runner->runTests();
 				$content = $runner->toHtml($this->doc,$LOCAL_LANG[$LANG->lang]);
-				$this->content.=$this->doc->section($LANG->getLL('show_runtests'),$content,0,1);
+				return $this->doc->section($LANG->getLL('show_runtests'),$content,0,1);
 			default:
 				$content = $LANG->getLL('intro_runtests');
 				$content .= $this->doc->spacer(5);
 				$content .= '<input name="CMD" type="hidden" value="start_runtests" />';
 				$content .= '<input name="submit" type="submit" value="'. $LANG->getLL('title_runtests').'" onclick="this.disabled=1;this.value=\'........ '.utf8_decode($LANG->getLL('wait')).' .........\'" />';
-				$this->content.=$this->doc->section($LANG->getLL('title_runtests'),$content,0,1);
+				return $this->doc->section($LANG->getLL('title_runtests'),$content,0,1);
 				break;
 		}
 	}
